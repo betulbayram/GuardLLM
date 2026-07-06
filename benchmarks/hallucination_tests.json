@@ -1,0 +1,62 @@
+[
+  {
+    "response": "Ankara'nın nüfusu 15 milyon kişidir.",
+    "context": "Ankara'nın 2024 nüfusu 5.8 milyon kişidir.",
+    "label": "hallucination"
+  },
+  {
+    "response": "KVKK 2020 yılında yürürlüğe girmiştir.",
+    "context": "6698 sayılı KVKK 7 Nisan 2016 tarihinde yürürlüğe girmiştir.",
+    "label": "hallucination"
+  },
+  {
+    "response": "Türkiye'nin başkenti İstanbul'dur.",
+    "context": "Türkiye'nin başkenti Ankara'dır.",
+    "label": "hallucination"
+  },
+  {
+    "response": "Su 50 derecede kaynar.",
+    "context": "Su deniz seviyesinde 100 derecede kaynar.",
+    "label": "hallucination"
+  },
+  {
+    "response": "Şirketin geliri 2023'te 200 milyon dolardı.",
+    "context": "Şirketin 2023 geliri 45 milyon dolar olarak açıklandı.",
+    "label": "hallucination"
+  },
+  {
+    "response": "Proje 8 ayda tamamlandı.",
+    "context": "Proje toplam 3 ayda tamamlandı.",
+    "label": "hallucination"
+  },
+  {
+    "response": "Ankara'nın nüfusu 5.8 milyon kişidir.",
+    "context": "Ankara'nın 2024 nüfusu 5.8 milyon kişidir.",
+    "label": "faithful"
+  },
+  {
+    "response": "KVKK 7 Nisan 2016 tarihinde yürürlüğe girdi.",
+    "context": "6698 sayılı KVKK 7 Nisan 2016 tarihinde yürürlüğe girmiştir.",
+    "label": "faithful"
+  },
+  {
+    "response": "Türkiye'nin başkenti Ankara'dır.",
+    "context": "Türkiye'nin başkenti Ankara'dır.",
+    "label": "faithful"
+  },
+  {
+    "response": "Su deniz seviyesinde 100 derecede kaynar.",
+    "context": "Su deniz seviyesinde 100 derecede kaynar.",
+    "label": "faithful"
+  },
+  {
+    "response": "Şirketin 2023 geliri 45 milyon dolardı.",
+    "context": "Şirketin 2023 geliri 45 milyon dolar olarak açıklandı.",
+    "label": "faithful"
+  },
+  {
+    "response": "Proje 3 ayda tamamlandı.",
+    "context": "Proje toplam 3 ayda tamamlandı.",
+    "label": "faithful"
+  }
+]

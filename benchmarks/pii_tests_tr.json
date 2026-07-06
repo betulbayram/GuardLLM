@@ -1,0 +1,145 @@
+[
+  {
+    "text": "Müşteri TC: 72742111184 kaydedildi",
+    "expected": [
+      "tc_kimlik"
+    ]
+  },
+  {
+    "text": "Müşteri TC: 94791111182 kaydedildi",
+    "expected": [
+      "tc_kimlik"
+    ]
+  },
+  {
+    "text": "Müşteri TC: 44347311108 kaydedildi",
+    "expected": [
+      "tc_kimlik"
+    ]
+  },
+  {
+    "text": "Müşteri TC: 88815211194 kaydedildi",
+    "expected": [
+      "tc_kimlik"
+    ]
+  },
+  {
+    "text": "Müşteri TC: 19872611184 kaydedildi",
+    "expected": [
+      "tc_kimlik"
+    ]
+  },
+  {
+    "text": "Telefon: 0532 123 45 67",
+    "expected": [
+      "telefon"
+    ]
+  },
+  {
+    "text": "Telefon: +90 555 987 65 43",
+    "expected": [
+      "telefon"
+    ]
+  },
+  {
+    "text": "Telefon: 05061234567",
+    "expected": [
+      "telefon"
+    ]
+  },
+  {
+    "text": "Telefon: 0(542) 111 22 33",
+    "expected": [
+      "telefon"
+    ]
+  },
+  {
+    "text": "E-posta adresi: ali@firma.com",
+    "expected": [
+      "email"
+    ]
+  },
+  {
+    "text": "E-posta adresi: ayse.yilmaz@example.com.tr",
+    "expected": [
+      "email"
+    ]
+  },
+  {
+    "text": "E-posta adresi: info@sirket.io",
+    "expected": [
+      "email"
+    ]
+  },
+  {
+    "text": "IBAN TR33 0006 1005 1978 6457 8413 26 hesabına yatırın",
+    "expected": [
+      "iban"
+    ]
+  },
+  {
+    "text": "IBAN TR120006200000000123456789 hesabına yatırın",
+    "expected": [
+      "iban"
+    ]
+  },
+  {
+    "text": "Kart numarası 4111 1111 1111 1111",
+    "expected": [
+      "kredi_karti"
+    ]
+  },
+  {
+    "text": "Kart numarası 5500005555555559",
+    "expected": [
+      "kredi_karti"
+    ]
+  },
+  {
+    "text": "Ali Yılmaz, TC 72742111184, tel 0532 123 45 67, mail ali@firma.com",
+    "expected": [
+      "tc_kimlik",
+      "telefon",
+      "email"
+    ]
+  },
+  {
+    "text": "Ödeme: IBAN TR33 0006 1005 1978 6457 8413 26 veya kart 4111 1111 1111 1111",
+    "expected": [
+      "iban",
+      "kredi_karti"
+    ]
+  },
+  {
+    "text": "Sipariş numaranız 12345678901 hazır",
+    "expected": []
+  },
+  {
+    "text": "Toplantı 2024 yılında yapıldı",
+    "expected": []
+  },
+  {
+    "text": "Ürün kodu ABC-9981 stokta",
+    "expected": []
+  },
+  {
+    "text": "Bugün 25 derece sıcaklık var",
+    "expected": []
+  },
+  {
+    "text": "Fatura tutarı 1500 TL olarak güncellendi",
+    "expected": []
+  },
+  {
+    "text": "Sayfa 42'de detaylar mevcut",
+    "expected": []
+  },
+  {
+    "text": "Kargo takip 998877 ile sorgulanır",
+    "expected": []
+  },
+  {
+    "text": "Yıl 1923'te cumhuriyet ilan edildi",
+    "expected": []
+  }
+]

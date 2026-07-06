@@ -1,0 +1,55 @@
+site_name: GuardLLM
+site_description: Open-source security guardrails for LLM applications (Turkish/KVKK support)
+site_url: https://www.betulbayram.com/GuardLLM/
+repo_url: https://github.com/betulbayram/GuardLLM
+repo_name: betulbayram/GuardLLM
+
+theme:
+  name: material
+  language: tr
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Aydınlık moda geç
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Karanlık moda geç
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+
+nav:
+  - Ana Sayfa: index.md
+  - Hızlı Başlangıç: quickstart.md
+  - Kullanım (Production): usage.md
+  - Konfigürasyon: configuration.md
+  - Dedektörler: detectors.md
+  - Entegrasyonlar: integrations.md
+  - Monitoring: monitoring.md
+  - KVKK Uyumluluk: kvkk.md
+  - Benchmark: benchmarks.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search

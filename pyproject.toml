@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "guardllm-tr"
+version = "0.3.0"
+description = "Open-source security guardrails for LLM applications — prompt injection, jailbreak, PII, hallucination & toxicity detection (with Turkish/KVKK support)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "betulbayram", email = "betulforpc@gmail.com" }]
+keywords = [
+    "llm",
+    "security",
+    "guardrails",
+    "prompt-injection",
+    "jailbreak",
+    "pii",
+    "hallucination",
+    "kvkk",
+    "ai-safety",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+# Heavy ML detectors are opt-in to keep the base install fast.
+ml = [
+    "sentence-transformers>=2.2",
+    "torch>=2.0",
+    "scikit-learn>=1.3",
+]
+toxicity = ["detoxify>=0.5"]
+pii = ["presidio-analyzer>=2.2", "presidio-anonymizer>=2.2"]
+api = ["fastapi>=0.110", "uvicorn>=0.27"]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.5",
+    "fastapi>=0.110",
+    "httpx>=0.27",
+]
+docs = [
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
+]
+all = [
+    "guardllm-tr[ml,toxicity,pii,api]",
+]
+
+[project.urls]
+Homepage = "https://github.com/betulbayram/GuardLLM"
+Repository = "https://github.com/betulbayram/GuardLLM"
+Documentation = "https://www.betulbayram.com/GuardLLM/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["guardllm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# UP007/UP045: we keep explicit Optional[...] / Union[...] for readability.
+ignore = ["UP007", "UP045"]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI's Depends()/Query() in argument defaults is the idiomatic pattern.
+"api/**" = ["B008"]
+# Regex pattern strings are unavoidably long.
+"guardllm/utils/patterns.py" = ["E501"]

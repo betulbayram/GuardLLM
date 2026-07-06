@@ -1,0 +1,41 @@
+# GuardLLM default configuration.
+# Load with:  Guard(config="configs/default_config.yaml")
+guards:
+  input:
+    prompt_injection:
+      enabled: true
+      threshold: 0.85
+      languages: ["tr", "en"]
+    jailbreak:
+      enabled: true
+      threshold: 0.80
+    pii_scanner:
+      enabled: true
+      categories: ["tc_kimlik", "telefon", "email", "iban", "kredi_karti"]
+      action: "mask" # mask | block | warn
+    topic_restrictor:
+      enabled: false # app-specific; opt-in
+      mode: "blocklist" # blocklist | allowlist
+      min_keywords: 1
+      topics:
+        tibbi_tavsiye: ["teşhis", "ilaç", "doz", "tedavi", "reçete"]
+        hukuki_tavsiye: ["dava", "avukat", "mahkeme"]
+      blocked: ["tibbi_tavsiye"]
+      allowed: [] # used in allowlist mode
+
+  output:
+    hallucination:
+      enabled: true
+      threshold: 0.70
+      method: "nli" # nli | llm_judge
+    toxicity:
+      enabled: true
+      threshold: 0.80
+    pii_redactor:
+      enabled: true
+      action: "mask"
+
+  monitor:
+    enabled: false
+    log_to: "stdout" # postgresql | file | stdout
+    alert_threshold: 10
